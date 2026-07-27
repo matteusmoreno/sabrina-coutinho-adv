@@ -15,7 +15,7 @@ function Footer() {
             <p className="site-footer__meta">
               Estratégia técnica, comunicação clara e acompanhamento próximo em cada caso.
             </p>
-            <p className="site-footer__meta">OAB/RJ: 245.731.</p>
+            <p className="site-footer__meta">OAB/RJ 271.318.</p>
 
             <a
               className="site-footer__cta"

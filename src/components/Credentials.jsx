@@ -7,7 +7,7 @@ function Credentials() {
       <article className="credentials__item">
         <Landmark size={18} aria-hidden="true" />
         <p className="credentials__label">Registro profissional</p>
-        <p className="credentials__value">OAB/RJ 245.731</p>
+        <p className="credentials__value">OAB/RJ 271.318</p>
       </article>
 
       <article className="credentials__item">
