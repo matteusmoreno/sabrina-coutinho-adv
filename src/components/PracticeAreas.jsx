@@ -4,7 +4,7 @@ import SectionReveal from './SectionReveal'
 
 const areas = [
   {
-    title: 'Direito de Familia',
+    title: 'Direito de Família',
     icon: HeartHandshake,
     description:
       'Atuação em divórcio, guarda, pensão e acordos familiares com foco em resolução segura e humanizada.',
@@ -16,7 +16,7 @@ const areas = [
         'Orientação para aposentadorias, benefícios e revisões com estratégia jurídica clara do início ao fim.',
   },
   {
-    title: 'Direito Civel',
+    title: 'Direito Cível',
     icon: Scale,
     description:
       'Defesa de direitos em contratos, cobranças, indenizações e conflitos patrimoniais no presencial e online.',

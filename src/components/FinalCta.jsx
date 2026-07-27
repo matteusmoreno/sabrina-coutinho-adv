@@ -37,7 +37,7 @@ function FinalCta() {
                 href="https://wa.me/5522998820818"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Iniciar atendimento juridico pelo WhatsApp"
+                aria-label="Iniciar atendimento jurídico pelo WhatsApp"
                 data-tracking="whatsapp_click"
                 data-location="final_cta"
                 onClick={handleWhatsappClick}
@@ -89,8 +89,6 @@ function FinalCta() {
             </a>
           </aside>
         </div>
-
-        <p className="cta-footnote">Canal prioritário de atendimento: WhatsApp.</p>
       </div>
     </SectionReveal>
   )
