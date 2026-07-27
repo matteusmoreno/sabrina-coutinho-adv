@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@squoosh/cli": "^0.7.1"
+  },
+  "_npx": {
+    "packages": [
+      "@squoosh/cli"
+    ]
+  }
+}
