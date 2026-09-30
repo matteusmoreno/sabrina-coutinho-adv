@@ -39,6 +39,18 @@ function About() {
         </div>
 
         <div className="about__side">
+          <figure className="about__portrait">
+            <img
+              src="/image-1.jpg"
+              alt="Retrato profissional de Sabrina Coutinho em estúdio escuro, com a estátua da Justiça ao lado"
+              width="1062"
+              height="1328"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>OAB/RJ 271.318 • Saquarema/RJ e Online</figcaption>
+          </figure>
+
           <section className="about__highlights" aria-label="Diferenciais da atuação">
             <article className="about__highlight-card">
               <BadgeCheck size={18} aria-hidden="true" />

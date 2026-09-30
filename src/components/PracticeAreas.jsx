@@ -1,31 +1,51 @@
-import { ArrowUpRight, FileCheck2, HeartHandshake, Landmark, Scale } from 'lucide-react'
+import {
+  ArrowUpRight,
+  Briefcase,
+  HeartHandshake,
+  Landmark,
+  Scale,
+  ScrollText,
+  ShieldCheck,
+} from 'lucide-react'
 import { trackEvent } from '../utils/tracking'
 import SectionReveal from './SectionReveal'
 
 const areas = [
   {
-    title: 'Direito de Família',
-    icon: HeartHandshake,
-    description:
-      'Atuação em divórcio, guarda, pensão e acordos familiares com foco em resolução segura e humanizada.',
-  },
-  {
     title: 'Direito Previdenciário',
     icon: Landmark,
     description:
-        'Orientação para aposentadorias, benefícios e revisões com estratégia jurídica clara do início ao fim.',
+      'Aposentadorias, benefícios, revisões e requerimentos administrativos perante o INSS, com estratégia clara do início ao fim.',
   },
   {
-    title: 'Direito Cível',
+    title: 'Família e Sucessões',
+    icon: HeartHandshake,
+    description:
+      'Divórcios, inventário, partilha e planejamento familiar com atuação humanizada e segurança jurídica.',
+  },
+  {
+    title: 'Direito Civil',
     icon: Scale,
     description:
-      'Defesa de direitos em contratos, cobranças, indenizações e conflitos patrimoniais no presencial e online.',
+      'Contratos, indenizações, cobranças, obrigações e outras demandas da vida civil, no presencial e online.',
   },
   {
-    title: 'Consultoria Jurídica',
-    icon: FileCheck2,
+    title: 'Trabalhista',
+    icon: Briefcase,
     description:
-      'Análise preventiva para reduzir riscos e apoiar decisões importantes com segurança jurídica.',
+      'Defesa dos seus direitos no ambiente de trabalho, com análise objetiva e condução estratégica do caso.',
+  },
+  {
+    title: 'Consumidor',
+    icon: ShieldCheck,
+    description:
+      'Proteção em relações de consumo, cobranças indevidas, falhas de serviço e conflitos com empresas.',
+  },
+  {
+    title: 'Planejamento Sucessório',
+    icon: ScrollText,
+    description:
+      'Organização patrimonial e sucessória para proteger o futuro da família com tranquilidade e previsibilidade.',
   },
 ]
 
@@ -40,11 +60,33 @@ function PracticeAreas() {
 
   return (
     <SectionReveal className="section" id="areas-de-atuacao" aria-labelledby="areas-heading">
-      <div className="section__header">
-        <p className="section__eyebrow">Atendimento estratégico</p>
-        <h2 id="areas-heading" className="section__title">
-          Áreas de atuação com atendimento em Saquarema/RJ e Online
-        </h2>
+      <div className="areas-featured">
+        <figure className="areas-featured__media">
+          <img
+            src="/image-5.jpg"
+            alt="Sabrina Coutinho em escritório, com documentos e livros jurídicos, em retrato profissional"
+            width="1062"
+            height="1328"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+
+        <div className="areas-featured__copy">
+          <p className="section__eyebrow">Áreas de atuação</p>
+          <h2 id="areas-heading" className="section__title">
+            Seu direito, minha prioridade
+          </h2>
+          <p className="section__text">
+            Atuação jurídica com compromisso, ética e atenção em cada detalhe, para
+            orientação segura em Saquarema/RJ e no atendimento online.
+          </p>
+          <ul className="areas-featured__values" aria-label="Pilares da atuação">
+            <li>Ética e transparência</li>
+            <li>Compromisso com o seu direito</li>
+            <li>Atendimento personalizado</li>
+          </ul>
+        </div>
       </div>
 
       <div className="areas-grid">

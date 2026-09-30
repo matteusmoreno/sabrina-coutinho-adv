@@ -2,6 +2,7 @@ import Hero from './components/Hero'
 import Credentials from './components/Credentials'
 import PracticeAreas from './components/PracticeAreas'
 import About from './components/About'
+import Gallery from './components/Gallery'
 import Process from './components/Process'
 import FinalCta from './components/FinalCta'
 import Faq from './components/Faq'
@@ -22,6 +23,7 @@ function App() {
         <Credentials />
         <PracticeAreas />
         <About />
+        <Gallery />
         <Process />
         <FinalCta />
         <Faq />
