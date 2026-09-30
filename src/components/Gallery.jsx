@@ -1,3 +1,5 @@
+import { useRef } from 'react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 import SectionReveal from './SectionReveal'
 
 const portraits = [
@@ -29,27 +31,65 @@ const portraits = [
 ]
 
 function Gallery() {
+  const scrollerRef = useRef(null)
+
+  function scrollByCard(direction) {
+    const scroller = scrollerRef.current
+    if (!scroller) return
+
+    const card = scroller.querySelector('.gallery-card')
+    const gap = 12
+    const amount = card ? card.getBoundingClientRect().width + gap : 260
+
+    scroller.scrollBy({
+      left: direction * amount,
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <SectionReveal className="section section--gallery" aria-labelledby="gallery-heading">
-      <div className="section__header">
-        <p className="section__eyebrow">Presença profissional</p>
-        <h2 id="gallery-heading" className="section__title">
-          Uma advocacia com identidade, seriedade e proximidade
-        </h2>
-        <p className="section__text">
-          Imagens do estúdio para transmitir a mesma postura do atendimento: técnica,
-          elegante e humana, em Saquarema/RJ e no online.
-        </p>
+      <div className="gallery-header">
+        <div>
+          <p className="section__eyebrow">Presença profissional</p>
+          <h2 id="gallery-heading" className="section__title">
+            Uma advocacia com identidade, seriedade e proximidade
+          </h2>
+        </div>
+
+        <div className="gallery-nav">
+          <button
+            type="button"
+            className="gallery-nav__btn"
+            aria-label="Ver retrato anterior"
+            onClick={() => scrollByCard(-1)}
+          >
+            <ChevronLeft size={18} aria-hidden="true" />
+          </button>
+          <button
+            type="button"
+            className="gallery-nav__btn"
+            aria-label="Ver próximo retrato"
+            onClick={() => scrollByCard(1)}
+          >
+            <ChevronRight size={18} aria-hidden="true" />
+          </button>
+        </div>
       </div>
 
-      <div className="gallery-grid">
-        {portraits.map((portrait, index) => (
-          <figure key={portrait.src} className={`gallery-card gallery-card--${index + 1}`}>
+      <div
+        className="gallery-track"
+        ref={scrollerRef}
+        tabIndex={0}
+        aria-label="Galeria de retratos profissionais. Deslize para o lado para ver mais."
+      >
+        {portraits.map((portrait) => (
+          <figure key={portrait.src} className="gallery-card">
             <img
               src={portrait.src}
               alt={portrait.alt}
-              width="900"
-              height="1125"
+              width="720"
+              height="900"
               loading="lazy"
               decoding="async"
             />
@@ -62,3 +102,4 @@ function Gallery() {
 }
 
 export default Gallery
+
